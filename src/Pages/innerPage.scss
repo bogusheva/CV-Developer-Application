@@ -1,0 +1,79 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.body-container {
+  display: flex;
+  align-items: stretch;
+  margin: 0 auto;
+
+  .panel-holder {
+    position: fixed;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    height: 100vh;
+
+    .general-panel {
+      background-color: $main-oxford-blue;
+      width: 89%;
+      max-width: 250px;
+      padding-top: 1.17rem;
+      @include tablet-view {
+        max-width: 54px;
+      }
+    }
+
+    .burger-panel {
+      max-width: 30px;
+      width: 11%;
+      padding-top: 1.67rem;
+
+      .burger-icon {
+        width: 30px;
+        height: 30px;
+        background-color: $main-oxford-blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 9px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .burger-icon-lines {
+          display: block;
+          border-bottom: 1px solid $main-white;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    padding: 0 3rem 1rem 280px;
+    @include tablet-view {
+      padding-left: 84px;
+    }
+
+    &.checked-navigation {
+      padding-left: 30px;
+    }
+
+    .main-content-holder {
+      position: relative;
+
+      section {
+        width: 100%;
+        padding-top: 4.17rem;
+
+        h2 {
+          font-weight: 700;
+          color: $main-shamrock;
+          padding-bottom: 3.33rem;
+          margin: 0;
+          @include tablet-view {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

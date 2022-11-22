@@ -1,0 +1,43 @@
+@import "./assets/base-styles/reset";
+@import "./assets/base-styles/fonts";
+@import "./assets/base-styles/variables";
+@import "./assets/base-styles/mixins";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+  letter-spacing: 0em;
+  @include tablet-view {
+    font-size: 11px;
+  }
+  @include mobile-view {
+    font-size: 10px;
+  }
+}
+body {
+  margin: 0 auto;
+  font-family: $font-family-main, $font-family-fallback;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h2 {
+  font-size: 2.08rem;
+}
+a {
+  color: $main-oxford-blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  width: 100%;
+}
+code {
+  font-family: $font-family-main, $font-family-fallback;
+}

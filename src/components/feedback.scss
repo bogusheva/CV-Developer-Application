@@ -1,0 +1,55 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.feedbacks-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 3.33rem;
+  flex-wrap: nowrap;
+
+  .feedback-each-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.67rem;
+    flex-wrap: nowrap;
+
+    .feedback-description {
+      background-color: #eeeeee;
+      padding: 1.17rem 1.25rem;
+      color: $main-oxford-blue;
+      font-size: 1.17rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    .feedback-data {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 1.67rem;
+      align-items: center;
+      justify-items: left;
+      padding: 1px;
+    }
+    .feedback-author-img-holder {
+      width: 4.17rem;
+      height: 4.17rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .feedback-author-img-holder img {
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+    a {
+      padding-left: 5px;
+      color: $main-shamrock;
+    }
+    .feedback-author-info {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 117%;
+    }
+  }
+}

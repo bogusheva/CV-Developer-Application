@@ -1,0 +1,68 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.general-panel {
+  text-align: center;
+  position: relative;
+}
+.button {
+  max-width: 126px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: $main-white;
+  background-color: $main-oxford-blue;
+  border-color: $main-oxford-blue;
+  font-size: 1.33rem;
+  font-weight: 400;
+  line-height: 119%;
+  text-align: center;
+
+  &:hover {
+    background-color: $main-shamrock;
+    border-color: $main-shamrock;
+    cursor: pointer;
+  }
+
+  &.back-button {
+    max-width: 177px;
+    font-size: 1.17rem;
+    font-weight: 400;
+    line-height: 121%;
+    padding: 5px 0.83rem;
+    position: absolute;
+    bottom: 1vh;
+    left: 73px;
+
+    .icon-contacts {
+      width: 1.17rem;
+      height: 1.17rem;
+      color: $main-white;
+    }
+
+    @include tablet-view {
+      left: 5px;
+      bottom: 3vh;
+      padding: 8px 13px;
+      background-color: $main-shamrock;
+      color: $main-gallery;
+    }
+    .button-text {
+      @include tablet-view {
+        display: none;
+      }
+    }
+  }
+  &.back-button-small {
+    max-width: 30px;
+    bottom: 0;
+    right: 40px;
+    position: fixed;
+    padding: 6px 0.83rem;
+
+    .icon-contacts {
+      width: 8px;
+      height: 13px;
+      color: $main-white;
+    }
+  }
+}

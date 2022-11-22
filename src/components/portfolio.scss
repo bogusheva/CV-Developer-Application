@@ -1,0 +1,167 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.portfolio-block-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.67rem;
+  flex-wrap: nowrap;
+
+  .portfolio-filters {
+    button {
+      color: $main-shamrock;
+      border: none;
+      background-color: $main-white;
+      padding: 0;
+
+      &:last-child:after {
+        content: "";
+        color: $main-shamrock;
+      }
+      &:hover {
+        color: $main-oxford-blue;
+        background-color: $main-white;
+        border: none;
+        cursor: pointer;
+      }
+      &::after {
+        content: "/";
+        padding: 0 0.83rem;
+        color: $main-shamrock;
+      }
+    }
+
+    .portfolio-filter-all {
+      &.is-checked {
+        color: $main-oxford-blue;
+        &::after {
+          color: $main-shamrock;
+        }
+      }
+    }
+
+    .portfolio-filter-code {
+      &.is-checked {
+        color: $main-oxford-blue;
+        &::after {
+          color: $main-shamrock;
+        }
+      }
+    }
+
+    .portfolio-filter-ui {
+      &.is-checked {
+        color: $main-oxford-blue;
+        &::after {
+          color: $main-shamrock;
+        }
+      }
+    }
+  }
+
+  .portfolio-projects {
+    display: flex;
+    flex-direction: row;
+    gap: 1.67rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    @include mobile-view {
+      flex-direction: column;
+    }
+
+    .portfolio-projects-item {
+      width: 25%;
+      position: relative;
+      overflow: hidden;
+      border-right: 0.83rem solid $main-white;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+
+      @include mobile-view {
+        width: 100%;
+        border-bottom: 5px solid $main-white;
+        border-right: 0;
+        margin: 0;
+        opacity: 0.6;
+      }
+    }
+
+    .bubble-block {
+      padding: 0.83rem;
+      font-size: 1.33rem;
+      transform: translateY(100%);
+      transition: transform ease-in 0.3s;
+      background-color: $main-gallery;
+
+      @include mobile-view {
+        width: 100%;
+        transform: none;
+        transition: none;
+        background-color: rgba(238, 238, 238, 0);
+      }
+
+      h4 {
+        color: $main-shamrock;
+        font-size: 1.33rem;
+        font-weight: 700;
+        line-height: 119%;
+        @include mobile-view {
+          color: $main-black;
+          font-size: 1rem;
+          padding: 5px;
+          font-weight: 600;
+        }
+      }
+      p {
+        color: $main-oxford-blue;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 150%;
+        padding: 5px 0;
+        @include tablet-view {
+          display: none;
+        }
+        @include mobile-view {
+          display: none;
+        }
+      }
+      a {
+        color: $main-shamrock;
+        font-size: 1.17rem;
+        font-weight: 600;
+        line-height: 121%;
+        @include mobile-view {
+          color: $main-black;
+          font-size: 1rem;
+          padding: 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .portfolio-projects-item-1 {
+    background: url(../assets/img/portfolio-card-1.png) no-repeat center/cover;
+  }
+
+  .portfolio-projects-item-2 {
+    background: url(../assets/img/portfolio-card-2.png) no-repeat center/cover;
+  }
+
+  .portfolio-projects-item-3 {
+    background: url(../assets/img/portfolio-card-1.png) no-repeat center/cover;
+  }
+
+  .portfolio-projects-item-4 {
+    background: url(../assets/img/portfolio-card-2.png) no-repeat center/cover;
+  }
+}
+
+.portfolio-projects-item:hover .bubble-block {
+  transform: translateY(0%);
+  @include mobile-view {
+    transform: none;
+  }
+}

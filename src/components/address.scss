@@ -1,0 +1,36 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.address-data {
+  max-width: 500px;
+
+  .contacts {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 1.6rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .icon-contacts {
+      color: $main-shamrock;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .contacts-data {
+      padding-left: 1.67rem;
+      color: $main-oxford-blue;
+      font-size: 1.33rem;
+      font-weight: 400;
+      line-height: 100%;
+      align-self: center;
+    }
+
+    .contacts-data-description {
+      display: block;
+      color: $main-raven;
+    }
+  }
+}

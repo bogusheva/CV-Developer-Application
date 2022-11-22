@@ -1,0 +1,94 @@
+@import "../assets/base-styles/variables";
+@import "../assets/base-styles/mixins";
+
+.education-holder {
+  max-height: 30vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+
+  @include mobile-view {
+    max-height: 80vh;
+  }
+
+  .education-each-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: $main-oxford-blue;
+
+    .education-period {
+      font-size: 1.33rem;
+      font-weight: 700;
+      line-height: 119%;
+      padding-right: 2.17rem;
+      padding-top: 1.25rem;
+    }
+
+    .education-description {
+      padding: 1.25rem;
+      background-color: $main-gallery;
+      position: relative;
+
+      .education-timeline {
+        border: 1px solid $main-white;
+        width: 0.83rem;
+        background-color: $main-shamrock;
+        position: absolute;
+        height: 90%;
+        top: 3.33rem;
+        left: -4.17rem;
+      }
+
+      .block-chevron {
+        background-color: $main-gallery;
+        width: 0.83rem;
+        height: 0.83rem;
+        rotate: 45deg;
+        position: absolute;
+        top: 1.5rem;
+        left: -0.42rem;
+      }
+
+      .education-title {
+        font-size: 1.33rem;
+        font-weight: 700;
+        line-height: 119%;
+      }
+
+      .education-description-text {
+        font-size: 1.17rem;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+.section-alternate {
+  background-color: $main-gallery;
+  height: 26vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $main-red;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .icon-contacts {
+    color: $main-shamrock;
+    height: 3rem;
+    width: 3rem;
+    animation: loading 2.5s ease-in-out infinite alternate;
+    opacity: 0.8;
+  }
+}
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
